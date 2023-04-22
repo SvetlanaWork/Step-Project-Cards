@@ -1,0 +1,6 @@
+# Каталоги
+node_modules
+.DS_Store
+vcs.xml
+./package-lock.json
+workspace.xml

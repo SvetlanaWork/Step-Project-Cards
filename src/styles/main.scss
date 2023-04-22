@@ -1,0 +1,295 @@
+@import "./montserrat.scss";
+@import "./variables.scss";
+@import "./mixins.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input {
+  outline: none;
+}
+
+.page {
+  font-family: "Montserrat-Medium";
+}
+
+// /* BASE */
+
+.container {
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 1200px;
+}
+
+.btn {
+  background-color: $secondary-background-color;
+  padding: 10px 45px;
+  border: 1.7px solid $main-color;
+  border-radius: 10px;
+  font-family: "Montserrat-Medium";
+  font-size: $m;
+  color: $main-color;
+  cursor: pointer;
+}
+
+#btn {
+  margin-top: 30px;
+}
+
+.btn:hover {
+  background-color: $main-color;
+  color: $secondary-background-color;
+}
+
+.input {
+  border: 1px solid $input-color;
+  border-radius: 5px;
+  font-family: "Montserrat-Medium";
+  color: $main-text-color;
+  font-size: $s;
+  padding: 5px 10px;
+}
+
+.input:focus {
+  border: 1px solid $main-color;
+}
+
+// /* HEADER */
+
+.header {
+  background-color: $secondary-background-color;
+
+  &-wrapper {
+    @include flex-align(space-between, flex-end);
+    padding: 25px 0;
+  }
+
+  &-logo {
+    cursor: pointer;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+#sign-out,
+#create-visit {
+  display: none;
+}
+
+.search-wrapper {
+  background-color: $secondary-background-color;
+  border-top: 2px solid $line-color;
+}
+
+.search {
+  @include flex-juctify(end);
+  gap: 20px;
+  padding: 18px 0;
+}
+
+.visits-wrapper {
+  background-color: $main-background-color;
+  min-height: 100vh;
+}
+
+.visits-text {
+  text-align: center;
+  font-size: $xl;
+  padding-top: 170px;
+  color: $main-color;
+}
+
+// /* MODAL */
+
+.background {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $modal-background-color;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $secondary-background-color;
+  padding: 45px 20px;
+  border-radius: 10px;
+  &-header {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: $l;
+    color: $main-color;
+    font-weight: 500;
+  }
+}
+
+.cross {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  cursor: pointer;
+}
+
+// /* FORM LOGIN */
+
+.login-form {
+  @include flex(center, column);
+  min-width: 320px;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.visits-wrapper {
+  padding-top: 30px;
+}
+
+.visit-header {
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $main-color;
+}
+
+#form-data {
+  @include flex-direction(column);
+  width: 320px;
+  margin-top: 10px;
+}
+//???????????????
+
+// //Card
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+.card-item {
+  @include flex(center, column);
+  position: relative;
+  font-family: Montserrat-Regular;
+  font-size: $xs;
+  list-style: none;
+  min-height: 300px;
+  min-width: 270px;
+  word-break: break-word;
+  background-color: $main-color;
+  border: $secondary-background-color solid 5px;
+  border-radius: 10px;
+  color: $secondary-background-color;
+  padding: 25px 35px 25px 25px;
+
+  &-text-hidden {
+    display: none;
+  }
+
+  &-btn-show {
+    position: absolute;
+    bottom: 30px;
+    font-family: Montserrat-Medium;
+    color: $secondary-background-color;
+    font-size: $xs;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &-btn-edit {
+    position: absolute;
+    top: 5px;
+    right: 40px;
+    font-size: 28px;
+    cursor: pointer;
+    color: $secondary-background-color;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+  &-btn-delete {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 40px;
+    text-decoration: none;
+    color: $secondary-background-color;
+    cursor: pointer;
+  }
+}
+.text-animation-slide-up{
+  animation: slideUp 3s forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(300%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.text-animation-fade{
+  animation: fade 3s forwards;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+
+#input-value {
+  margin-top: 10px;
+  border: 1px solid $input-color;
+  font-family: "Montserrat-Medium";
+  font-size: $s;
+  color: #747171;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 320px;
+}
+
+#select {
+  width: 320px;
+  margin-top: 30px;
+}
+
+.card-item-text {
+  font-family: "Montserrat-Regular";
+  font-size: $xs;
+  padding-top: 10px;
+}
+.form-card-edit{
+  display: flex;
+  flex-direction: column;
+}
+#done-checkbox{
+    position: absolute;
+    bottom: 8px;
+    left: 75px;
+}
+
+#label-done{
+    position: absolute;
+    bottom: 5px;
+    font-family: Montserrat-Medium;
+    color: white;
+    font-size: 15px;
+}

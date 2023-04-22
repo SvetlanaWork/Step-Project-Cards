@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo-ico.ico">
+    <title>Your Doctor</title>
+<script defer src="bundle.js"></script></head>
+    <body class="page">
+        <header class="header">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="logo-wrapper">
+                        <a  class="header-logo" href="#"><img src="img/Logo.svg" alt="Logo"></a>
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="btn" id="sign-in">Sign in</button>
+                        <button class="btn" id="sign-out">Sign out</button>
+                        <button class="btn" id="create-visit">Create visit</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="search-wrapper">
+            <div class="container">
+                <div class="search">
+                    <input name="search" type="text" class="input" id="search" placeholder="Search...">
+                    <select name="visit-status" id="visit-status" class="input">
+                        <option selected="selected" value="">Visit status</option>
+                        <option value="Done">Done</option>
+                        <option value="In progress">In progress</option>
+                    </select>
+                    <select name="visit-urgency" id="visit-urgency" class="input">
+                        <option selected="selected" value="">Visit urgency</option>
+                        <option value="normal">Normal</option>
+                        <option value="priority">Priority</option>
+                        <option value="urgent">Urgent</option> 
+                    </select>
+                </div>
+            </div>
+        </nav>
+        <main class="main"> 
+            <section class="visits-wrapper">
+                <div class="container" id="container">
+                    <h2 class="visit-header">My visits</h2>
+                    <div class="visits">
+                        <p class="visits-text">Visits not added</p>
+                    </div>
+                    <ul class="card-list">
+                    </ul>
+                </div>
+            </section>
+        </main>
+    
+    <!-- <div id="container">
+        <header id="header">
+            <div id="header-wrapper">
+                <div class="logo-wrapper">
+                    <img src="./assets/img/svg/Logo.svg" class="logo" alt="">
+                </div>
+                <div id="button-wrapper">
+                    <p id="button-text">Sign in</p>
+                </div>
+            </div>
+
+        </header>
+        <nav id="nav">
+            <div id="nav-wrapper">
+                <div id="search-wrapper">
+
+                    <input type="text" id="input-search" placeholder="Search...">
+                    <select name="Visit status" id="visit-wrapper">
+                        <option selected="selected" value="">Visit status</option>
+                        <option value="">Done</option>
+                        <option value="">In progress</option>
+                    </select>
+                    <select name="Visit status" id="visit-urgency-wrapper">
+                        <option selected="selected" value="">Visit urgency</option>
+                        <option value="">Low</option>
+                        <option value="">Normal</option>
+                        <option value="">High</option>
+                    </select>
+                </div>
+
+
+            </div>
+        </nav>
+        <div id="main">
+            
+        </div>
+    </div> -->
+</body>
+
+</html>
